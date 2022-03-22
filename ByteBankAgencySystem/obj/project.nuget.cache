@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nPpAeOGHDfvpKKlS/wtLS1+yslWEWaNYPOY8gMz0qicMUDpoU/UGz4wArkwPSaQAdzMtTAYwwVETgjRS1JuPjQ==",
+  "dgSpecHash": "R2ldeOUr7KGlESiZkWgfw6KJTi7JUKUCvQOnFZSuKHVIxavin+Skc+HJ2IVjC4CTFx4qWA9bk+QlPpNUsh0o0A==",
   "success": true,
-  "projectFilePath": "C:\\courses\\poo_csharp\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
+  "projectFilePath": "C:\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\glenn.mateus\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\glenn.mateus\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

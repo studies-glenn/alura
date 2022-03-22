@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\courses\\poo_csharp\\ByteBank.Models\\ByteBank.Models.csproj",
+      "projectUniqueName": "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
       "projectName": "ByteBank.Models",
-      "projectPath": "C:\\courses\\poo_csharp\\ByteBank.Models\\ByteBank.Models.csproj",
+      "projectPath": "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
       "packagesPath": "C:\\Users\\glenn.mateus\\.nuget\\packages\\",
-      "outputPath": "C:\\courses\\poo_csharp\\ByteBank.Models\\obj\\",
+      "outputPath": "c:\\courses\\alura\\ByteBank.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\glenn.mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"

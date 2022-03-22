@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\courses\\poo_csharp\\ByteBank.Models\\ByteBank.Models.csproj": {}
+    "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {}
   },
   "projects": {
-    "C:\\courses\\poo_csharp\\ByteBank.Models\\ByteBank.Models.csproj": {
+    "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\courses\\poo_csharp\\ByteBank.Models\\ByteBank.Models.csproj",
+        "projectUniqueName": "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
         "projectName": "ByteBank.Models",
-        "projectPath": "C:\\courses\\poo_csharp\\ByteBank.Models\\ByteBank.Models.csproj",
+        "projectPath": "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
         "packagesPath": "C:\\Users\\glenn.mateus\\.nuget\\packages\\",
-        "outputPath": "C:\\courses\\poo_csharp\\ByteBank.Models\\obj\\",
+        "outputPath": "C:\\courses\\alura\\ByteBank.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\glenn.mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"

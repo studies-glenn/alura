@@ -15,9 +15,14 @@ public class CurrentAccountList
 
     public void Print()
     {
-        for (int idx = 0; idx < _index; idx++)
+        System.Console.WriteLine($"List length: {_items.Length}");
+        for (int idx = 0; idx < _items.Length; idx++)
         {
-            if (_items[idx] is null) System.Console.WriteLine("Null item identified...");
+            if (_items[idx] is null)
+            {
+                System.Console.WriteLine("Null item identified...");
+                continue;
+            }
             System.Console.WriteLine($"Account at postition {idx} number: {_items[idx].Number}");
         }
     }
@@ -36,22 +41,25 @@ public class CurrentAccountList
         //! opperator '==' verifies references
         //! opperator '.Equals()' verifies values
 
-        for (int idx = 0; idx < _index; idx++)
+        for (int idx = 0; idx < _index-1; idx++)
         {
             if(_items[idx].Number.Equals(item.Number)) itemIndex++;
             _items[idx] = _items[idx + itemIndex];
         }
-        _items[_index] = null;
         _index--;
+        _items[_index] = null;
     }
 
     private void CheckListCapacity(int size)
     {
-        int newSize = _items.Length * 2;
-        if (_items.Length >= size) { return; }
-        if (size < newSize) { size = newSize; }
-        CurrentAccount[] newArray = new CurrentAccount[size];
-        _items.CopyTo(newArray, 0);
-        _items = newArray;
+        if (_items.Length <= _index)
+        {
+            int newSize = _items.Length * 2;
+            if (_items.Length >= size) { return; }
+            if (size < newSize) { size = newSize; }
+            CurrentAccount[] newArray = new CurrentAccount[size];
+            _items.CopyTo(newArray, 0);
+            _items = newArray;
+        }
     }
 }

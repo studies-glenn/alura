@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VV/lU/5G9f749cxR7Z8d35SPvVk3zzuf8JlFzWocKqtKJy2bJ7xWBafuTCrbPlGkZ+bQ6J42E7MbQiUroZMAZg==",
+  "dgSpecHash": "Avmj9Pu6g26fB1Gm7zpcPAzIFi5XEm06dWO0b1KegqOAbmKus8nOm8fhB082NXjJ++mgsXXHAN5Xi2vTw+wLkg==",
   "success": true,
-  "projectFilePath": "C:\\courses\\poo_csharp\\ByteBank.Models\\ByteBank.Models.csproj",
+  "projectFilePath": "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
