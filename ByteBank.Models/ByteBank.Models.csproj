@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Using Include="Models" />
+    <Using Include="Interfaces" />
+    <Using Include="Helpers" />
+    <Using Include="Exceptions" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin\Debug\net6.0\ByteBank.Models.xml</DocumentationFile>
+  </PropertyGroup>
+  
+</Project>

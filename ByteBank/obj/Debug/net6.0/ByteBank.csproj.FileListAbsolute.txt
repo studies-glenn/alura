@@ -1,0 +1,17 @@
+C:\courses\poo_csharp\ByteBank\bin\Debug\net6.0\ByteBank.exe
+C:\courses\poo_csharp\ByteBank\bin\Debug\net6.0\ByteBank.deps.json
+C:\courses\poo_csharp\ByteBank\bin\Debug\net6.0\ByteBank.runtimeconfig.json
+C:\courses\poo_csharp\ByteBank\bin\Debug\net6.0\ByteBank.dll
+C:\courses\poo_csharp\ByteBank\bin\Debug\net6.0\ByteBank.pdb
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.csproj.AssemblyReference.cache
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.AssemblyInfoInputs.cache
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.AssemblyInfo.cs
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.csproj.CoreCompileInputs.cache
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.dll
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\refint\ByteBank.dll
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.pdb
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.genruntimeconfig.cache
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ref\ByteBank.dll
+C:\courses\poo_csharp\ByteBank\bin\Debug\net6.0\ByteBank.Models.dll
+C:\courses\poo_csharp\ByteBank\obj\Debug\net6.0\ByteBank.csproj.CopyComplete
