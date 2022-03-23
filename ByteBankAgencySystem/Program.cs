@@ -9,8 +9,58 @@ namespace ByteBankAgencySystem
     {
         public static void Main(string[] args)
         {
-            CurrentAccountListExample();
+            GenericListExample();
+
+			System.Console.WriteLine("End of process...");
+			Console.ReadLine();
         }
+
+		private static void GenericListExample()
+		{
+			GenericList<int> lst = new GenericList<int>();
+			lst.Add(10);
+			lst.Add(25);
+			lst.Add(43);
+			lst.AddRangeParams(16, 20, 11);
+
+			for (int i = 0; i < lst.Length; i++)
+			{
+				System.Console.WriteLine($"Item at {i}: {lst[i]}");
+			}
+		}
+		
+		private static void SemiGenericListExample()
+		{
+			ObjectList lst = new ObjectList();
+			lst.Add(10);
+			lst.Add(25);
+			lst.Add(43);
+			lst.AddRangeParams(16, 20, 11);
+
+			for (int i = 0; i < lst.Length; i++)
+			{
+				System.Console.WriteLine($"Item at {i}: {(int)lst[i]}");
+			}
+		}
+
+		private static void ParamsExample()
+		{
+			CurrentAccountList accounts = new CurrentAccountList();
+			// ! Without 'params' argument
+			// accounts.AddRange(new CurrentAccount[]
+			// {
+			// 	new CurrentAccount(0001, 098123),
+			// 	new CurrentAccount(0001, 854756),
+			// 	new CurrentAccount(0001, 223443)
+			// });
+
+			// ! With 'params' argument
+			accounts.AddRangeParams(
+				new CurrentAccount(0001, 098123),
+				new CurrentAccount(0001, 854756),
+				new CurrentAccount(0001, 223443)
+			);
+		}
 
         private static void CurrentAccountListExample()
         {
@@ -22,10 +72,15 @@ namespace ByteBankAgencySystem
             accounts.Add(new CurrentAccount(0001, 854756));
             accounts.Add(new CurrentAccount(0001, 223443));
 
-            accounts.Print();
-            accounts.Remove(toDelete);
-            System.Console.WriteLine($"---");
-            accounts.Print();
+			for (int i = 0; i < accounts.Length; i++)
+			{
+				System.Console.WriteLine($"Getting account on index {i}: {accounts[i].Number}");
+			}
+
+            // accounts.Print();
+            // accounts.Remove(toDelete);
+            // System.Console.WriteLine($"---");
+            // accounts.Print();
         }
 
         private static void CurrentAccountArray()

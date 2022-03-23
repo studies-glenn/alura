@@ -2,10 +2,10 @@ using Models;
 
 namespace ByteBankAgencySystem.Models;
 
-public class CurrentAccountList
+public class ObjectList
 {
     private static int _next;
-    private CurrentAccount[] _items;
+    private object[] _items;
 
 	public int Length {
 		get 
@@ -14,9 +14,9 @@ public class CurrentAccountList
 		}
 	}
 
-    public CurrentAccountList(int length= 5)
+    public ObjectList(int length= 5)
     {
-        _items = new CurrentAccount[length];
+        _items = new object[length];
         _next = 0;
     }
 
@@ -27,13 +27,13 @@ public class CurrentAccountList
             int newSize = _items.Length * 2;
             if (_items.Length >= size) { return; }
             if (size < newSize) { size = newSize; }
-            CurrentAccount[] newArray = new CurrentAccount[size];
+            object[] newArray = new object[size];
             _items.CopyTo(newArray, 0);
             _items = newArray;
         }
     }
 
-	public CurrentAccount GetByIndex(int idx)
+	public object GetByIndex(int idx)
 	{
 		if(idx < 0 || idx >= _next) 
 		{
@@ -44,8 +44,8 @@ public class CurrentAccountList
 
 
 	// ! Indexer :: Lets us to return values from the class like it was a Array, 
-	// ! but the instance is of type CurrentAccountList
-	public CurrentAccount this[int idx]
+	// ! but the instance is of type ObjectList
+	public object this[int idx]
 	{
 		get
 		{
@@ -53,7 +53,7 @@ public class CurrentAccountList
 		}
 	}
 
-    public void Add(CurrentAccount item)
+    public void Add(object item)
     {
         CheckListCapacity(_items.Length + 1);
         System.Console.WriteLine($"Addint item on: {_next}");
@@ -61,22 +61,22 @@ public class CurrentAccountList
         _next++;
     }
 
-	public void AddRangeParams(params CurrentAccount[] list)
+	public void AddRangeParams(params object[] list)
 	{
-		foreach (CurrentAccount item in list)
+		foreach (object item in list)
 		{
 			Add(item);
 		}
 	}
-	public void AddRange(CurrentAccount[] list)
+	public void AddRange(object[] list)
 	{
-		foreach (CurrentAccount item in list)
+		foreach (object item in list)
 		{
 			Add(item);
 		}
 	}
 
-    public void Remove(CurrentAccount item)
+    public void Remove(object item)
     {
         int itemIndex = 0;
         //! opperator '==' verifies references

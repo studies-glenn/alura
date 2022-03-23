@@ -2,10 +2,10 @@ using Models;
 
 namespace ByteBankAgencySystem.Models;
 
-public class CurrentAccountList
+public class GenericList<T>
 {
     private static int _next;
-    private CurrentAccount[] _items;
+    private T[] _items;
 
 	public int Length {
 		get 
@@ -14,9 +14,9 @@ public class CurrentAccountList
 		}
 	}
 
-    public CurrentAccountList(int length= 5)
+    public GenericList(int length= 5)
     {
-        _items = new CurrentAccount[length];
+        _items = new T[length];
         _next = 0;
     }
 
@@ -27,13 +27,13 @@ public class CurrentAccountList
             int newSize = _items.Length * 2;
             if (_items.Length >= size) { return; }
             if (size < newSize) { size = newSize; }
-            CurrentAccount[] newArray = new CurrentAccount[size];
+            T[] newArray = new T[size];
             _items.CopyTo(newArray, 0);
             _items = newArray;
         }
     }
 
-	public CurrentAccount GetByIndex(int idx)
+	public T GetByIndex(int idx)
 	{
 		if(idx < 0 || idx >= _next) 
 		{
@@ -44,8 +44,8 @@ public class CurrentAccountList
 
 
 	// ! Indexer :: Lets us to return values from the class like it was a Array, 
-	// ! but the instance is of type CurrentAccountList
-	public CurrentAccount this[int idx]
+	// ! but the instance is of type GenericList
+	public T this[int idx]
 	{
 		get
 		{
@@ -53,7 +53,7 @@ public class CurrentAccountList
 		}
 	}
 
-    public void Add(CurrentAccount item)
+    public void Add(T item)
     {
         CheckListCapacity(_items.Length + 1);
         System.Console.WriteLine($"Addint item on: {_next}");
@@ -61,22 +61,22 @@ public class CurrentAccountList
         _next++;
     }
 
-	public void AddRangeParams(params CurrentAccount[] list)
+	public void AddRangeParams(params T[] list)
 	{
-		foreach (CurrentAccount item in list)
+		foreach (T item in list)
 		{
 			Add(item);
 		}
 	}
-	public void AddRange(CurrentAccount[] list)
+	public void AddRange(T[] list)
 	{
-		foreach (CurrentAccount item in list)
+		foreach (T item in list)
 		{
 			Add(item);
 		}
 	}
 
-    public void Remove(CurrentAccount item)
+    public void Remove(T item)
     {
         int itemIndex = 0;
         //! opperator '==' verifies references
@@ -88,7 +88,7 @@ public class CurrentAccountList
             _items[idx] = _items[idx + itemIndex];
         }
         _next--;
-        _items[_next] = null;
+        //_items[_next] = null;
     }
 
     public void Print()

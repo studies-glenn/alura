@@ -1,18 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<Reference Include="..\Libs\ByteBank.Models.dll" />
+		<Using Include="Services" />
+		<Using Include="Models" />
+		<Using Include="Interfaces" />
+		<Using Include="Exceptions" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <!-- <Reference Include="..\Libs\ByteBank.Models.dll" /> -->
-    <Using Include="Services" />
-    <Using Include="Models" />
-    <Using Include="Interfaces" />
-    <Using Include="Exceptions" />
-  </ItemGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-  
 </Project>
