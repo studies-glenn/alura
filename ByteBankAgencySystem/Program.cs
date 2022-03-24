@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using ByteBankAgencySystem.Models;
+using Extensions;
 using Models;
 using Services;
 
@@ -9,11 +10,61 @@ namespace ByteBankAgencySystem
     {
         public static void Main(string[] args)
         {
-            GenericListExample();
+			SortingLists();
 
 			System.Console.WriteLine("End of process...");
-			Console.ReadLine();
         }
+
+		private static void SortingLists()
+		{
+			var ages = new List<int>();
+			ages.AddRange(38, 10, 52, 44, 25);
+			
+			ages.Sort();
+
+			foreach (var age in ages)
+			{
+				System.Console.WriteLine($"Age: {age}");
+			}
+
+			var names = new List<string> {
+				"Glenn",
+				"Ana",
+				"Pamela",
+				"Ariana"
+			};
+			names.Sort();
+
+			foreach (var name in names)
+			{
+				System.Console.WriteLine($"Name: {name}");
+			}
+		
+			
+		}
+
+
+		private static void DotNetList()
+		{
+			List<int> lst = new List<int>();
+			lst.Add(43);
+			//! The default "List" type that come from dotNet library
+			//! does not implement an "AddRange" like ours
+			//! It forces us to declare an Array of the type we are dealling with
+			lst.AddRange(new int[]{ 16, 20, 11 });
+
+			//? This is the extended method we've created 
+			//? into the class ListExtensions
+			lst.AddRange(10,15,20,25,30);
+
+			//! It also works in this way:
+			ListExtensions.AddRange(lst, 8,9,5,6);
+
+			for (int i = 0; i < lst.Count; i++)
+			{
+				System.Console.WriteLine($"Item at {i}: {lst[i]}");
+			}
+		}
 
 		private static void GenericListExample()
 		{
