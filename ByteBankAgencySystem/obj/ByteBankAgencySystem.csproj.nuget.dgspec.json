@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj": {}
+    "D:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj": {}
   },
   "projects": {
-    "d:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
+    "D:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
+        "projectUniqueName": "D:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
         "projectName": "ByteBank.Models",
-        "projectPath": "d:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
+        "projectPath": "D:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "d:\\Dev\\courses\\alura\\ByteBank.Models\\obj\\",
+        "outputPath": "D:\\Dev\\courses\\alura\\ByteBank.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "d:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj": {
+    "D:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
+        "projectUniqueName": "D:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
         "projectName": "ByteBankAgencySystem",
-        "projectPath": "d:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
+        "projectPath": "D:\\Dev\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "d:\\Dev\\courses\\alura\\ByteBankAgencySystem\\obj\\",
+        "outputPath": "D:\\Dev\\courses\\alura\\ByteBankAgencySystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
-                "projectPath": "d:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj"
+              "D:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
+                "projectPath": "D:\\Dev\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj"
               }
             }
           }
