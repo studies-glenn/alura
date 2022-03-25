@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj": {}
+    "C:\\courses\\alura\\ByteBankExportacao\\ByteBankExportacao.csproj": {}
   },
   "projects": {
-    "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
+    "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
+        "projectUniqueName": "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
         "projectName": "ByteBank.Models",
-        "projectPath": "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
+        "projectPath": "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
         "packagesPath": "C:\\Users\\glenn.mateus\\.nuget\\packages\\",
-        "outputPath": "c:\\courses\\alura\\ByteBank.Models\\obj\\",
+        "outputPath": "C:\\courses\\alura\\ByteBank.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\glenn.mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -56,14 +56,14 @@
         }
       }
     },
-    "c:\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj": {
+    "C:\\courses\\alura\\ByteBankExportacao\\ByteBankExportacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
-        "projectName": "ByteBankAgencySystem",
-        "projectPath": "c:\\courses\\alura\\ByteBankAgencySystem\\ByteBankAgencySystem.csproj",
+        "projectUniqueName": "C:\\courses\\alura\\ByteBankExportacao\\ByteBankExportacao.csproj",
+        "projectName": "ByteBankExportacao",
+        "projectPath": "C:\\courses\\alura\\ByteBankExportacao\\ByteBankExportacao.csproj",
         "packagesPath": "C:\\Users\\glenn.mateus\\.nuget\\packages\\",
-        "outputPath": "c:\\courses\\alura\\ByteBankAgencySystem\\obj\\",
+        "outputPath": "C:\\courses\\alura\\ByteBankExportacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\glenn.mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -78,8 +78,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
-                "projectPath": "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj"
+              "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
+                "projectPath": "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj"
               }
             }
           }
@@ -93,12 +93,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Humanizer.Core": {
-              "target": "Package",
-              "version": "[2.14.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
