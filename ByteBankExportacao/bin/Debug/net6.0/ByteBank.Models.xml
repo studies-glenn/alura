@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteBank.Models</name>
+    </assembly>
+    <members>
+        <member name="T:Models.CurrentAccount">
+            <summary>
+            Defines a Current Account of Byte bank
+            </summary>
+        </member>
+        <member name="M:Models.CurrentAccount.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of CurrentAccount.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Exception thrown when <paramref name="owner"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Exception thrown when <paramref name="agency"/> is lower than, or equal to zero.</exception>
+            <exception cref="T:System.ArgumentException">Exception thrown when <paramref name="number"/> is lower than, or equal to zero.</exception>
+            <param name="owner">Represents the property <see cref="P:Models.CurrentAccount.Owner"/>.Value cannot be null</param>
+            <param name="agency">Represents the property <see cref="P:Models.CurrentAccount.Agency"/>.Value must be greater than 0.</param>
+            <param name="number">Represents the property <see cref="P:Models.CurrentAccount.Number"/>.Value must be greater than 0.</param>
+        </member>
+        <member name="M:Models.CurrentAccount.WithDraw(System.Double)">
+            <summary>
+            WithDraw method.
+            </summary>
+            <exception cref="T:Exceptions.InsufficientBalanceException">Exception thrown when <paramref name="value"/> is greater than <see cref="F:Models.CurrentAccount._balance"/>.</exception>
+            <exception cref="T:System.ArgumentException">Exception thrown when <paramref name="value"/> is lower than, or equal to zero.</exception>
+            <param name="value"> 
+            Represents the withdraw <paramref name="value"/>.
+            Must be lower than the current balance.
+            Must be greater than 0.
+            </param>
+        </member>
+        <member name="M:Models.CurrentAccount.Deposit(System.Double)">
+            <summary>
+            Deposit method.
+            </summary>
+            <exception cref="T:System.ArgumentException">Exception thrown when <paramref name="value"/> is lower than, or equal to zero.</exception>
+            <param name="value">
+            Represents the amount of money you want to deposit.
+            Must be greater than 0.
+            </param>
+        </member>
+        <member name="M:Models.CurrentAccount.Transfer(System.Double,Models.CurrentAccount)">
+            <summary>
+            Transfer method.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Exception thrown if <paramref name="targetAccount"/> is null.</exception>
+            <exception cref="T:System.ArgumentException">Exception thrown when <paramref name="value"/> is lower than, or equal to zero.</exception>
+            <param name="value">
+            Represents the amount of money you want to transfer.
+            Must be greater than 0.
+            </param>
+            <param name="targetAccount">
+            The target account to tranfer.
+            Value cannot be null.
+            </param>
+        </member>
+    </members>
+</doc>

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "ByteBank.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ByteBank.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ByteBank.Models.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ByteBank.Models/1.0.0": {
+      "type": "project",
+      "path": "../ByteBank.Models/ByteBank.Models.csproj",
+      "msbuildProject": "../ByteBank.Models/ByteBank.Models.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "ByteBank.Models >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\glenn.mateus\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
-      "projectName": "ByteBank.Models",
-      "projectPath": "c:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj",
+      "projectUniqueName": "C:\\courses\\alura\\ByteBankExportacao\\ByteBankExportacao.csproj",
+      "projectName": "ByteBankExportacao",
+      "projectPath": "C:\\courses\\alura\\ByteBankExportacao\\ByteBankExportacao.csproj",
       "packagesPath": "C:\\Users\\glenn.mateus\\.nuget\\packages\\",
-      "outputPath": "c:\\courses\\alura\\ByteBank.Models\\obj\\",
+      "outputPath": "C:\\courses\\alura\\ByteBankExportacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\glenn.mateus\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj": {
+              "projectPath": "C:\\courses\\alura\\ByteBank.Models\\ByteBank.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
