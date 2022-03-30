@@ -1,7 +1,9 @@
-﻿partial class Program
+﻿using Classes;
+
+class Program
 {
 	static void Main()
 	{
-		Arrays();
+		ObjectLists.Execute();
 	}
 }

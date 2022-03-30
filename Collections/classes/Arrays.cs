@@ -1,12 +1,8 @@
-partial class Program
+namespace Classes;
+public static class Arrays
 {
-	static string aulaIntro = "Introdução às coleções";
-	static string aulaModelando = "Modelando a Classe Aula";
-	static string aulaSets = "Trabalhando com conjuntos";
-
-
 	//! Arrays são coleções de tamanho fixo
-	static void Arrays()
+	public static void Execute()
 	{
 
 		//? Array inicializado com valores predefinidos
@@ -19,9 +15,9 @@ partial class Program
 
 		//? Array inicializado com tamanho predefinido
 		string[] aulas = new string[3];
-		aulas[0] = aulaIntro;
-		aulas[1] = aulaModelando;
-		aulas[2] = aulaSets;
+		aulas[0] = Model.aulaIntro;
+		aulas[1] = Model.aulaModelando;
+		aulas[2] = Model.aulaSets;
 		Print(aulas);
 
 		IndexOfElement(aulas);
@@ -42,7 +38,7 @@ partial class Program
 
 		//! 'LastIndexOf' busca pela última ocorrência do parâmetro de busca passado a ele
 		//! neste exemplo: aulaModelando
-		Console.WriteLine(Array.LastIndexOf(aulas, aulaModelando));
+		Console.WriteLine(Array.LastIndexOf(aulas, Model.aulaModelando));
 
 		//? Inverte a ordem do array
 		Array.Reverse(aulas);
