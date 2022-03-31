@@ -1,9 +1,9 @@
-﻿using Classes;
+﻿using Services;
 
 class Program
 {
 	static void Main()
 	{
-		ObjectLists.Execute();
+		CoursesServices.Execute();
 	}
 }

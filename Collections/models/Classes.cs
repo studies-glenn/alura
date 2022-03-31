@@ -1,9 +1,9 @@
-public class Aulas : IComparable
+public class Classes : IComparable
 {
 	public string Title { get; set; }
 	public int Time { get; set; }
 
-	public Aulas(string title, int time)
+	public Classes(string title, int time)
 	{
 		Title = title;
 		Time = time;
@@ -16,7 +16,7 @@ public class Aulas : IComparable
 
 	public int CompareTo(object? obj)
 	{
-		var cls = obj as Aulas;
+		var cls = obj as Classes;
 		return Title.CompareTo(cls.Title);
 	}
 }

@@ -1,4 +1,4 @@
-namespace Classes;
+namespace Services;
 public static class Arrays
 {
 	//! Arrays são coleções de tamanho fixo
