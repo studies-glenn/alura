@@ -2,6 +2,9 @@ using System.Collections.ObjectModel;
 
 class Courses
 {
+
+	private IDictionary<int, Students> dicStudents;
+
 	private IList<Classes> _classes;
 	// public int TempoTotal { get; private set; }
 	public int TempoTotal
@@ -21,6 +24,7 @@ class Courses
 		Course = course;
 		Teatcher = teatcher;
 		Students = new HashSet<Students>();
+		dicStudents = new Dictionary<int, Students>();
 		_classes = new List<Classes>();
 	}
 
@@ -40,11 +44,19 @@ class Courses
 	internal void AddEnrollment(Students student)
 	{
 		Students.Add(student);
+		dicStudents.Add(student.Enrollment, student);
 	}
 
 	public bool IsRegistered(Students student)
 	{
 		return Students.Contains(student);
+	}
+
+	internal Students GetByEnrollment(int enrollment)
+	{
+		Students s = null;
+		dicStudents.TryGetValue(enrollment, out s);
+		return s;
 	}
 
 	public override string ToString()

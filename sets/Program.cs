@@ -19,6 +19,9 @@
 		Console.WriteLine($"O aluno {a1.Name} está matriculado?");
 		Console.WriteLine(csharpCollections.IsRegistered(a1));
 		Console.WriteLine(csharpCollections.IsRegistered(a4));
+		Console.WriteLine("---");
 
+		Students a5 = csharpCollections.GetByEnrollment(5617);
+		Console.WriteLine(a5);
 	}
 }
