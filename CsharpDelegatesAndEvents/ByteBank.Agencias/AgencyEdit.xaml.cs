@@ -21,11 +21,28 @@ namespace ByteBank.Agencias
 
         private void InitializeControls()
         {
-            var saveEventHandler = (RoutedEventHandler)SaveClick + CloseWindow;
-            var cancelEventHandler = (RoutedEventHandler)CancelClick + CloseWindow;
+            //!Anonymous method
+            /*
+             *! In the course whe example is this:
+             ** RoutedEventHandler dialogResultTrue = delegate(object o, RoutedEventArgs e)
+             ** {
+             **      DialogResult = true;
+             ** }
+             */
+            RoutedEventHandler saveHandler = (sender, e) =>
+            {
+                DialogResult = true;
+            }; 
+            RoutedEventHandler cancelHandler = (sender, e) =>
+            {
+                DialogResult = false;
+            };
 
-            btnSave.Click += new RoutedEventHandler(saveEventHandler);
-            btnCancel.Click += new RoutedEventHandler(cancelEventHandler);
+            var saveEventHandler = saveHandler + CloseWindow;
+            var cancelEventHandler = cancelHandler + CloseWindow;
+
+            btnSave.Click += saveEventHandler;
+            btnCancel.Click += cancelEventHandler;
         }
 
         private void FillTextBox()
@@ -35,16 +52,6 @@ namespace ByteBank.Agencias
             txtPhone.Text = _agency.Telefone;
             txtAddress.Text = _agency.Endereco;
             txtDescription.Text = _agency.Descricao;
-        }
-
-        private void CancelClick(object sender, RoutedEventArgs e)
-        {
-            DialogResult = false;
-        }
-
-        private void SaveClick(object sender, RoutedEventArgs e)
-        {
-            DialogResult = true;
         }
 
         private void CloseWindow(object sender, RoutedEventArgs e) => Close();
