@@ -34,10 +34,17 @@ namespace ByteBank.Agencias
             if (_validate != null)
             {
                 List<Delegate> _validateInvocationList = new List<Delegate>(_validate.GetInvocationList());
-                
-                var isValid = _validateInvocationList
-                                .Select(item => (ValidateEventHandler)item)
-                                .Any(validacao => validacao(Text));
+
+                var isValid = true;
+                foreach (ValidateEventHandler invocation in _validateInvocationList)
+                {
+                    if(!invocation(Text))
+                    {
+                        isValid = false;
+                        break;
+                    }
+                }
+
                                 
                 Background = isValid
                     ? new SolidColorBrush(Colors.White)
