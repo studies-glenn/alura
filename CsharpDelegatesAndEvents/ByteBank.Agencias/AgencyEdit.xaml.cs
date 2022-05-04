@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Media;
 using ByteBank.Agencias.DAL.Models;
 
 namespace ByteBank.Agencias
@@ -32,7 +35,7 @@ namespace ByteBank.Agencias
             RoutedEventHandler saveHandler = (sender, e) =>
             {
                 DialogResult = true;
-            }; 
+            };
             RoutedEventHandler cancelHandler = (sender, e) =>
             {
                 DialogResult = false;
@@ -43,16 +46,26 @@ namespace ByteBank.Agencias
 
             btnSave.Click += saveEventHandler;
             btnCancel.Click += cancelEventHandler;
+
+            txtName.Validate += BuildDelegateForTextFields;
+            txtDescription.Validate += BuildDelegateForTextFields; 
+            txtAddress.Validate += BuildDelegateForTextFields; 
+            txtPhone.Validate += BuildDelegateForTextFields;
+            txtNumber.Validate += BuildDelegateForTextFields;
+            txtNumber.Validate += ValidateOnlyDigits;
         }
 
         private void FillTextBox()
         {
-            txtNumber.Text = _agency.Numero;
-            txtName.Text = _agency.Nome;
-            txtPhone.Text = _agency.Telefone;
-            txtAddress.Text = _agency.Endereco;
-            txtDescription.Text = _agency.Descricao;
+            txtNumber.Text = _agency.Numero.Trim();
+            txtName.Text = _agency.Nome.Trim();
+            txtPhone.Text = _agency.Telefone.Trim();
+            txtAddress.Text = _agency.Endereco.Trim();
+            txtDescription.Text = _agency.Descricao.Trim();
         }
+        private bool BuildDelegateForTextFields(string txt) => !string.IsNullOrEmpty(txt);
+
+        private bool ValidateOnlyDigits(string txt) => txt.All(char.IsDigit);
 
         private void CloseWindow(object sender, RoutedEventArgs e) => Close();
     }
