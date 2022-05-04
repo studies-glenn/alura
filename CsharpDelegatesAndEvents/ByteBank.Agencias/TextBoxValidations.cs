@@ -1,4 +1,7 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace ByteBank.Agencias
@@ -7,22 +10,42 @@ namespace ByteBank.Agencias
 
     public class TextBoxValidations : TextBox
     {
-        public event ValidateEventHandler Validate;
+        private ValidateEventHandler _validate;
+        public event ValidateEventHandler Validate
+        {
+            add
+            {
+                _validate += value;
+                OnValidate();
+            }
+            remove
+            {
+                _validate -= value;
+            }
+        }
 
         public TextBoxValidations()
         {
             TextChanged += ValidateTextBox_TextChanged;
         }
 
-        private void ValidateTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void OnValidate()
         {
-            if (Validate != null)
+            if (_validate != null)
             {
-                var isValid = Validate(Text);
+                List<Delegate> _validateInvocationList = new List<Delegate>(_validate.GetInvocationList());
+                
+                var isValid = _validateInvocationList
+                                .Select(item => (ValidateEventHandler)item)
+                                .Any(validacao => validacao(Text));
+                                
                 Background = isValid
                     ? new SolidColorBrush(Colors.White)
                     : new SolidColorBrush(Colors.OrangeRed);
             }
         }
+
+        private void ValidateTextBox_TextChanged(object sender, TextChangedEventArgs e) => OnValidate();
+
     }
 }
