@@ -48,8 +48,8 @@ namespace ByteBank.Agencias
             btnCancel.Click += cancelEventHandler;
 
             txtName.Validate += BuildDelegateForTextFields;
-            txtDescription.Validate += BuildDelegateForTextFields; 
-            txtAddress.Validate += BuildDelegateForTextFields; 
+            txtDescription.Validate += BuildDelegateForTextFields;
+            txtAddress.Validate += BuildDelegateForTextFields;
             txtPhone.Validate += BuildDelegateForTextFields;
             txtNumber.Validate += BuildDelegateForTextFields;
             txtNumber.Validate += ValidateOnlyDigits;
@@ -63,9 +63,12 @@ namespace ByteBank.Agencias
             txtAddress.Text = _agency.Endereco.Trim();
             txtDescription.Text = _agency.Descricao.Trim();
         }
-        private bool BuildDelegateForTextFields(string txt) => !string.IsNullOrEmpty(txt);
 
-        private bool ValidateOnlyDigits(string txt) => txt.All(char.IsDigit);
+        private void BuildDelegateForTextFields(object sender, ValidateEventArgs e)
+            => e.isValid = !string.IsNullOrEmpty(e.Text);
+
+        private void ValidateOnlyDigits(object sender, ValidateEventArgs e)
+            => e.isValid = e.Text.All(char.IsDigit);
 
         private void CloseWindow(object sender, RoutedEventArgs e) => Close();
     }

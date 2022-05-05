@@ -6,7 +6,7 @@ using System.Windows.Media;
 
 namespace ByteBank.Agencias
 {
-    public delegate bool ValidateEventHandler(string txt);
+    public delegate void ValidateEventHandler(object sender, ValidateEventArgs e);
 
     public class TextBoxValidations : TextBox
     {
@@ -23,22 +23,19 @@ namespace ByteBank.Agencias
                 _validate -= value;
             }
         }
-
-        public TextBoxValidations()
-        {
-            TextChanged += ValidateTextBox_TextChanged;
-        }
-
-        private void OnValidate()
+        
+        protected virtual void OnValidate()
         {
             if (_validate != null)
             {
-                List<Delegate> _validateInvocationList = new List<Delegate>(_validate.GetInvocationList());
+                var _validateInvocationList = _validate.GetInvocationList();
+                var validateEventArgs = new ValidateEventArgs(Text);
 
                 var isValid = true;
                 foreach (ValidateEventHandler invocation in _validateInvocationList)
                 {
-                    if(!invocation(Text))
+                    invocation(this, validateEventArgs);
+                    if (!validateEventArgs.isValid)
                     {
                         isValid = false;
                         break;
@@ -52,7 +49,10 @@ namespace ByteBank.Agencias
             }
         }
 
-        private void ValidateTextBox_TextChanged(object sender, TextChangedEventArgs e) => OnValidate();
-
+        protected override void OnTextChanged(TextChangedEventArgs e)
+        {
+            base.OnTextChanged(e);
+            OnValidate();
+        }
     }
 }
